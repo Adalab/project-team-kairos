@@ -43,15 +43,13 @@ class App extends React.Component {
     const value = event.currentTarget.value;
     const id = event.currentTarget.id;
     if (id === 'sendChecked') {
-
       this.setState((prevState) => {
         const newSendChecked = prevState.sendChecked;
         console.log(newSendChecked);
         return {
           sendChecked: !newSendChecked
         }
-      } )
-
+      })
     } else if (id === 'dataChecked') {
       this.setState((prevState) => {
         const newDataChecked = prevState.dataChecked;
@@ -59,7 +57,7 @@ class App extends React.Component {
 
           dataChecked: !newDataChecked
         }
-      } )
+      })
     } else {
       this.setState({ [id]: value });
     }
